@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "AI Prompt Market",
+    "version": "1.0",
+    "description": "Prompt market extension",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "./content/main/img/down.png",
+            "32": "./content/main/img/down.png",
+            "48": "./content/main/img/down.png",
+            "128": "./content/main/img/down.png"
+        }
+    },
+    "icons": {
+        "16": "./content/main/img/down.png",
+        "48": "./content/main/img/down.png",
+        "128": "./content/main/img/down.png"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'; style-src 'self' 'unsafe-inline'"
+    }
+}

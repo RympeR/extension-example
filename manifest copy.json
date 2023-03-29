@@ -1,0 +1,46 @@
+{
+    "name": "test extension2",
+    "version": "1.0.0",
+    "description": "video extension course",
+    "manifest_version": 3,
+    "background": {
+        "scripts": [
+            "background.js",
+            "backgroundMessaging.js"
+        ],
+        "persistant": false
+    },
+    "content_scripts": [
+      {
+          "matches": ["https://*.youtube.com/*"],
+          "exclude_matches": ["https://*.youtube.com/watch*"],
+          "js": [
+              "./content/main/js/content.js",
+              "contentMessaging.js"
+          ],
+          "css": ["./content/main/css/main.css"],
+          "run_at": "document_end"
+      }
+  ],
+    "permissions": [
+        "bookmarks",
+        "storage"
+    ],
+    "icons": {
+        "16": "./content/main/img/down.png",
+        "48": "./content/main/img/down.png",
+        "128": "./content/main/img/down.png"
+    },
+    "browser_action": {
+        "default_title": "First extension to test it",
+        "default_popup": "popup.html"
+    },
+    "action": {
+        "default_icon": {
+          "16": "./content/main/img/down.png",
+          "32": "./content/main/img/down.png",
+          "48": "./content/main/img/down.png",
+          "128": "./content/main/img/down.png"
+        }
+      }
+}
